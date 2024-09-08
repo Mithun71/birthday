@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            background-color: #f8e2e7;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff4d4d;
+            margin: 20px 0;
+        }
+
+        .message {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 15px 0;
+        }
+
+        .balloons {
+            position: relative;
+            display: inline-block;
+            margin: 20px auto;
+        }
+
+        .balloon {
+            width: 50px;
+            height: 80px;
+            background-color: red;
+            border-radius: 50px 50px 0 0;
+            position: relative;
+            margin: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .balloon:nth-child(2) {
+            background-color: yellow;
+            animation-delay: 1s;
+        }
+
+        .balloon:nth-child(3) {
+            background-color: blue;
+            animation-delay: 2s;
+        }
+
+        .string {
+            width: 2px;
+            height: 60px;
+            background-color: #000;
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        #birthdayImage {
+            display: none;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 50%;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        #revealButton {
+            padding: 10px 20px;
+            background-color: #ff4d4d;
+            color: #fff;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        #revealButton:hover {
+            background-color: #ff6666;
+        }
+
+        .birthday-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            text-align: center;
+            animation: slideUp 1s ease-out;
+            border: 2px solid #ff4d4d;
+            background: linear-gradient(135deg, #ff4d4d, #ffeb3b);
+            color: #fff;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .birthday-card img {
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 5px solid #fff;
+        }
+
+        .birthday-card h2 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin: 0;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .message {
+                font-size: 1rem;
+            }
+
+            .balloon {
+                width: 40px;
+                height: 70px;
+            }
+
+            #revealButton {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+
+            .birthday-card img {
+                max-width: 150px;
+            }
+
+            .birthday-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Happy Birthday, Jhumur Halder Jhuma! 🎉</h1>
+        <div class="message">
+            Wishing you a day filled with love, laughter, and happiness!<br>
+            Enjoy your special day to the fullest! 🎂🎁🎈
+        </div>
+
+        <!-- Additional Colorful Birthday Card -->
+        <div class="birthday-card">
+            <img src="second2.jpg" alt="Birthday Card Image"> <!-- Replace with actual image URL -->
+            <h2>Happy Birthday, Jhumur Halder (Ammu)!</h2>
+        </div>
+
+        <div class="balloons">
+            <div class="balloon">
+                <div class="string"></div>
+            </div>
+            <div class="balloon">
+                <div class="string"></div>
+            </div>
+            <div class="balloon">
+                <div class="string"></div>
+            </div>
+        </div>
+
+        <!-- Button to reveal the image -->
+        <button id="revealButton" onclick="revealImage()">Click Here for a Surprise 🎁</button>
+
+        <!-- Hidden birthday image -->
+        <img id="birthdayImage" src="Birthaday.jpg" alt="Birthday Surprise Image">
+    </div>
+
+    <script>
+        // Function to reveal the birthday image with animation
+        function revealImage() {
+            var image = document.getElementById('birthdayImage');
+            image.style.display = 'block';  // Display the image
+        }
+    </script>
+</body>
+</html>
